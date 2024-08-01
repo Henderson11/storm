@@ -23,4 +23,8 @@ build/
 secrets.toml
 *.log
 */assertion.log
-*results/
+/result/
+/examples/
+*.toml
+*.json
+.gitignore

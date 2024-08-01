@@ -21,12 +21,12 @@ args.output_dir/
 
 import os
 from argparse import ArgumentParser
-
-from knowledge_storm import STORMWikiRunnerArguments, STORMWikiRunner, STORMWikiLMConfigs
-from knowledge_storm.lm import OpenAIModel, AzureOpenAIModel
-from knowledge_storm.rm import YouRM, BingSearch
-from knowledge_storm.utils import load_api_key
-
+import sys
+sys.path.append('../../')
+from storm_dev.storm.knowledge_storm import STORMWikiRunnerArguments, STORMWikiRunner, STORMWikiLMConfigs
+from storm_dev.storm.knowledge_storm.lm import OpenAIModel, AzureOpenAIModel
+from storm_dev.storm.knowledge_storm.rm import YouRM, BingSearch
+from storm_dev.storm.knowledge_storm.utils import load_api_key
 
 def main(args):
     load_api_key(toml_file_path='secrets.toml')
